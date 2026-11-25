@@ -26,3 +26,7 @@ Run_SPHY_Windows.bat "C:\models\basin\SPHY_config.cfg"
 The run file searches common Anaconda and Miniconda locations or asks for the path to `conda.bat`. It runs `python -m SPHY.main -i <config-file>` inside the `sphy` environment. You must create and edit a valid SPHY configuration and input datasets yourself; the batch files do not provide model inputs.
 
 
+
+## Streamlit browser runner
+
+The Streamlit page is a modern Python 3 interface that launches SPHY in the separate legacy `sphy` Conda environment. Install its UI dependencies with `python -m pip install -r requirements-streamlit.txt`, then from this repository root run `python -m streamlit run streamlit_app.py`. Streamlit opens the UI in your browser. Select a configuration file and run. PCRaster and valid model input data must already be available to the `sphy` environment.
